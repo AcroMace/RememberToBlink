@@ -12,6 +12,10 @@
 		637ABBF91ECFCCA0007E1E80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637ABBF71ECFCCA0007E1E80 /* Main.storyboard */; };
 		637ABBFB1ECFCCA0007E1E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637ABBFA1ECFCCA0007E1E80 /* Assets.xcassets */; };
 		637ABBFE1ECFCCA0007E1E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637ABBFC1ECFCCA0007E1E80 /* LaunchScreen.storyboard */; };
+		63B7B1BC1ECFCEB600756B34 /* MuseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B1BB1ECFCEB600756B34 /* MuseManager.swift */; };
+		63B7B1C61ECFD51E00756B34 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B7B1C51ECFD51E00756B34 /* libc++.tbd */; };
+		63B7B1C71ECFD97E00756B34 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B7B1BE1ECFD3F100756B34 /* CoreBluetooth.framework */; };
+		63B7B1CC1ECFDA9800756B34 /* Muse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B7B1CB1ECFDA9800756B34 /* Muse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		637ABBFA1ECFCCA0007E1E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		637ABBFD1ECFCCA0007E1E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		637ABBFF1ECFCCA0007E1E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B7B1BA1ECFCE1000756B34 /* RememberToBlink-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RememberToBlink-Bridging-Header.h"; sourceTree = "<group>"; };
+		63B7B1BB1ECFCEB600756B34 /* MuseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseManager.swift; sourceTree = "<group>"; };
+		63B7B1BE1ECFD3F100756B34 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		63B7B1C51ECFD51E00756B34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		63B7B1CB1ECFDA9800756B34 /* Muse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Muse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B7B1C71ECFD97E00756B34 /* CoreBluetooth.framework in Frameworks */,
+				63B7B1CC1ECFDA9800756B34 /* Muse.framework in Frameworks */,
+				63B7B1C61ECFD51E00756B34 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				637ABBF21ECFCCA0007E1E80 /* RememberToBlink */,
 				637ABBF11ECFCCA0007E1E80 /* Products */,
+				63B7B1BD1ECFD3F100756B34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +69,24 @@
 			children = (
 				637ABBF31ECFCCA0007E1E80 /* AppDelegate.swift */,
 				637ABBF51ECFCCA0007E1E80 /* ViewController.swift */,
+				63B7B1BB1ECFCEB600756B34 /* MuseManager.swift */,
+				63B7B1BA1ECFCE1000756B34 /* RememberToBlink-Bridging-Header.h */,
 				637ABBF71ECFCCA0007E1E80 /* Main.storyboard */,
 				637ABBFA1ECFCCA0007E1E80 /* Assets.xcassets */,
 				637ABBFC1ECFCCA0007E1E80 /* LaunchScreen.storyboard */,
+				63B7B1CB1ECFDA9800756B34 /* Muse.framework */,
 				637ABBFF1ECFCCA0007E1E80 /* Info.plist */,
 			);
 			path = RememberToBlink;
+			sourceTree = "<group>";
+		};
+		63B7B1BD1ECFD3F100756B34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B1C51ECFD51E00756B34 /* libc++.tbd */,
+				63B7B1BE1ECFD3F100756B34 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +99,7 @@
 				637ABBEC1ECFCCA0007E1E80 /* Sources */,
 				637ABBED1ECFCCA0007E1E80 /* Frameworks */,
 				637ABBEE1ECFCCA0007E1E80 /* Resources */,
+				63B7B1CD1ED0956000756B34 /* Run Linter */,
 			);
 			buildRules = (
 			);
@@ -132,12 +158,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63B7B1CD1ED0956000756B34 /* Run Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Linter";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		637ABBEC1ECFCCA0007E1E80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				637ABBF61ECFCCA0007E1E80 /* ViewController.swift in Sources */,
+				63B7B1BC1ECFCEB600756B34 /* MuseManager.swift in Sources */,
 				637ABBF41ECFCCA0007E1E80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +254,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "RememberToBlink/RememberToBlink-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -253,6 +298,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "RememberToBlink/RememberToBlink-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -264,6 +310,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N92XZM98NX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RememberToBlink",
+				);
 				INFOPLIST_FILE = RememberToBlink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acromace.RememberToBlink;
@@ -277,6 +328,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N92XZM98NX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RememberToBlink",
+				);
 				INFOPLIST_FILE = RememberToBlink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acromace.RememberToBlink;
@@ -304,6 +360,7 @@
 				637ABC041ECFCCA0007E1E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
