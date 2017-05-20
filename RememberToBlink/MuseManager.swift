@@ -11,6 +11,7 @@ import CoreBluetooth
 
 protocol MuseBlinkDelegate: class {
     func didConnectToMuse()
+    func didDisconnectFromMuse()
     func museBlinkReceived()
 }
 
