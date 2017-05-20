@@ -19,7 +19,6 @@ class ViewController: UIViewController, MuseBlinkDelegate {
     let alertColourBackground = UIColor.white
 
     let museManager = MuseManager()
-    var connectedToMuse = false
     var countdownTimer: Timer? // Timer that updates the background to see if you need to blink
     var lastBlink: Date? // Time of the last blink
     var lastAlertBackgroundWasRed = true // True if the background for the last tick was red (see countdownTime)
@@ -27,6 +26,9 @@ class ViewController: UIViewController, MuseBlinkDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         museManager.delegate = self
+
+        // Stop the screen from going to sleep
+        UIApplication.shared.isIdleTimerDisabled = true
 
         updateConnectionState(connected: false)
     }
