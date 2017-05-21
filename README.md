@@ -4,6 +4,12 @@ An overengineered solution for a simple problem: I don't blink enough while usin
 
 An iOS app that uses the [Muse headband](http://www.choosemuse.com) to detect blinks and then annoys the user if they haven't blinked for 10 seconds.
 
+## Demo
+
+![RememberToBlink demo](https://github.com/AcroMace/RememberToBlink/raw/master/Demo.gif)
+
+[YouTube video](https://youtu.be/cMlHyn134Vg)
+
 ## Annoying things
 
 Fun things the phone does until you blink
