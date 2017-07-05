@@ -31,20 +31,32 @@ class ViewController: UIViewController, MuseBlinkDelegate {
         UIApplication.shared.isIdleTimerDisabled = true
 
         updateConnectionState(connected: false)
+
+        // Check to see when the app is backgrounded and then re-opened
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(appWillEnterForeground),
+                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                               object: nil)
+    }
+
+    func appWillEnterForeground() {
+        // When an app is re-opened, the timer should be reset
+        // Otherwise, the alarm will start immediately
+        print("Re-entered foreground")
+        updateConnectionState(connected: false)
+        museManager.connectToMuse()
     }
 
     func updateConnectionState(connected: Bool) {
         // Check that there weren't any previous timers
-        countdownTimer?.invalidate()
-        countdownTimer = nil
+        stopTimer()
 
         if connected {
             print("Connected to Muse")
             statusLabel.text = ""
             view.backgroundColor = UIColor.black
 
-            // Start the timer updates
-            countdownTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: countdownTime)
+            restartTimer()
         } else {
             print("Disconnected from Muse")
 
@@ -52,6 +64,18 @@ class ViewController: UIViewController, MuseBlinkDelegate {
             statusLabel.textColor = UIColor.white
             view.backgroundColor = UIColor.red
         }
+    }
+
+    fileprivate func stopTimer() {
+        countdownTimer?.invalidate()
+        countdownTimer = nil
+    }
+
+    fileprivate func restartTimer() {
+        stopTimer()
+
+        // Start the timer updates
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: countdownTime)
     }
 
     // This is called on the main thread

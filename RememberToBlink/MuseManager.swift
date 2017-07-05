@@ -35,7 +35,7 @@ class MuseManager: NSObject {
         museManager.startListening()
     }
 
-    fileprivate func connectToMuse() {
+    func connectToMuse() {
         guard let muse = museManager.getMuses().first else {
             print("No Muses detected")
             return
